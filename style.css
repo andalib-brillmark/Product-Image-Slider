@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.main-carousel .carousel-cell {
+    width: 100%;
+}
+
+.main-carousel .carousel-cell img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: contain;
+}
+
+.carousel-nav, .main-carousel .flickity-button {
+    display: none;
+}
+
+.main-carousel .flickity-page-dots .dot {
+    background: #e5efec;
+    opacity: 1;
+}
+
+.main-carousel .flickity-page-dots .dot.is-selected {
+    background: #919191;
+    opacity: 1;
+}
+
+@media screen and (min-width: 797px) {
+    .container {
+        width: 50%;
+        max-width: 100%;
+        margin: 0 auto 0 40px;
+        padding-right: 108px;
+    }
+
+    .main-carousel .flickity-button {
+        display: inline-block;
+    }
+    
+    .main-carousel .flickity-page-dots {
+        display: none;
+    }
+    
+    .main-carousel .flickity-button:active {
+        opacity: 1;
+    }
+    
+    .main-carousel .flickity-button-icon {
+        width: 90%;
+        height: 90%;
+        opacity: 0;
+    }
+    
+    .main-carousel .flickity-button.flickity-prev-next-button.previous {
+        background: url(https://www.cornetbarcelona.com/cdn/shop/files/image_28.png?v=1698491368);
+        height: 93px;
+        width: 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        left: -45px;
+    }
+    
+    .main-carousel .flickity-button.flickity-prev-next-button.next {
+        background: url(https://www.cornetbarcelona.com/cdn/shop/files/image_81.png?v=1698491368);
+        height: 93px;
+        width: 40px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        right: -45px;
+    }
+    
+    .main-carousel  .carousel-cell {
+        visibility: hidden;
+        left: 0 !important;
+        opacity: 0;
+        transform: none !important;
+        transition: opacity 0.3s ease-in-out;
+        z-index: -1;
+    }
+    
+    .main-carousel .carousel-cell.is-selected {
+        opacity: 1;
+        z-index: 0;
+        visibility: visible;
+    }
+    
+    .main-carousel .flickity-slider {
+        transform: none !important;
+    }
+
+    .carousel-nav {
+        display: block;
+    }
+    
+    .carousel-nav .flickity-viewport {
+        overflow: hidden;
+        height: 100% !important;
+    }
+    
+    .carousel-nav .flickity-slider {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto 0 auto;
+        flex-wrap: wrap;
+        position: static;
+        transform: none !important;
+    }
+    
+    .carousel-nav .carousel-cell {
+        width: 14.5%;
+        margin: 10px 3px;
+        opacity: 0.7;
+        position: static !important;
+        transform: none !important;
+     }
+    
+     .carousel-nav .carousel-cell.is-nav-selected {
+        opacity: 1;
+    }
+    
+    .carousel-nav .carousel-cell img {
+        width: 100%;
+        height: auto;
+    }
+}
